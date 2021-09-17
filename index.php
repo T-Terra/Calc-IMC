@@ -1,12 +1,12 @@
 <?php
-  require __DIR__ . '/src/controllers/controller_validate.php';
-  use src\controllers\Controller_validate\Controller_validate;
+  require __DIR__ . '/src/class/People.php';
+  use src\class\People;
   
   $age = $_POST['age'];
   $height = $_POST['height'];
   $weight = $_POST['weight'];
-  $val = new Controller_validate($age, $height, $weight);
-  //var_dump($val);
+  $sex = $_POST['options'];
+  $val = new People($age, $height, $weight, $sex);
       
 ?>
 <!DOCTYPE html>
@@ -27,10 +27,10 @@
         <form action="./" method="post">
           <h1>Cálculo IMC</h1>
           <div class="sex-button">
-            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-            <label class="btn btn-secondary" for="option1">Homem</label>
-            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-            <label class="btn btn-secondary" for="option2">Mulher</label>
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" value="M" checked>
+            <label class="btn btn-secondary" for="option1">Masculino</label>
+            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" value="F">
+            <label class="btn btn-secondary" for="option2">Feminino</label>
           </div>
           <div class="input-group mb-3">
             <input type="text" class="form-control" name="age" placeholder="Idade" aria-label="Idade" aria-describedby="basic-addon1">
@@ -54,7 +54,7 @@
       <p>
         <pre>
         <?php
-          echo "<p class='resp'>Seu imc é: {$val->imc()}</p>";
+          echo "<p class='resp'>Seu imc é: {$val->imc()} Você é do Genero: {$val->getSex()}</p>";
           //var_dump($val);
         ?>
         </pre>

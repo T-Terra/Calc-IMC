@@ -31,8 +31,7 @@ main.main section div.form div.sub-button {
   justify-content: center;
 }
 
-div.resp p{
-  width: 100vw;
+div.resp p {
   display: flex;
   justify-content: center;
   color: white;

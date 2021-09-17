@@ -1,5 +1,5 @@
 <?php
-namespace src\controllers\Controller_validate;
+namespace src\controllers;
 
 class Controller_validate {
   private $age;
@@ -21,11 +21,6 @@ class Controller_validate {
     else {
       echo "<p>Erro! Digite somente números.</p>";
     }
-  }
-
-  public function imc() {
-    $this->tot = $this->getWeight() / ($this->getHeight() * $this->getHeight());
-    return number_format($this->tot, 1, ".", ",");
   }
 
   private function setAge($age) {
