@@ -1,12 +1,14 @@
 <?php
 namespace src\class;
+require __DIR__ ."../controllers/controller_validate.php";
+use controller\controller_validate;
 use src\class\Person;
 class People extends Person {
   private $sex;
 
-  public function __construct($name, $age, $height, $weight, $sex)
+  public function __construct($age, $height, $weight, $sex)
   {
-    parent::__construct($name, $age, $height, $weight);
+    parent::__construct($age, $height, $weight);
     $this->setSex($sex);
   }
 

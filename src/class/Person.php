@@ -2,14 +2,12 @@
 namespace src\class;
 
 class Person {
-  private $name;
   private $age;
   private $height;
   private $weight;
 
-  public function __construct($name = null, $age = null, $height = null, $weight = null)
+  public function __construct($age = null, $height = null, $weight = null)
   {
-    $this->setName($name);
     $this->setAge($age);
     $this->setHeight($height);
     $this->setWeight($weight);
@@ -17,9 +15,6 @@ class Person {
   
 
   //getters
-  public function getName() {
-    return $this->name;
-  }
   public function getAge() {
     return $this->age;
   }
@@ -30,9 +25,6 @@ class Person {
     return $this->weight;
   }
   //setters
-  private function setName($name) {
-    $this->name = $name;
-  }
   private function setAge($age) {
     $this->age = $age;
   }

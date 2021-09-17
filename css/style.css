@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main.main {
+  width: 100vw;
+  height: auto;
+}
+
+main.main section {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+main.main section div.form div.sex-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+main.main section div.form div.sub-button {
+  display: flex;
+  justify-content: center;
+}
+
+div.resp p{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: green;
+  font-size: 2rem;
+}
